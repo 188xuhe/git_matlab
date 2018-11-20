@@ -1,5 +1,2 @@
-Git is a distributed version control system.
-Git is free software distributed under the GPL.
-Git tracks changes of files.
-My stupid boss still prefers SVN.
-xuhe
+指纹识别算法
+20181119  增加方向图
