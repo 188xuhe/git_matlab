@@ -1,5 +1,10 @@
-function image_seg=segment(image,gradx,grady,m,n,r)
+%% segment_block
+%使用块梯度图基于阈值进行图像分割
+%效果不好
+%%
+function image_seg=segment_block(image,gradx,grady,m,n,r)
 %r为块的尺寸
+image=tofloat(image);
 %% 计算图像的sobel梯度
 grad=abs(gradx)+abs(grady);
 grad=grad/max(grad(:));
