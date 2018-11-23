@@ -8,7 +8,7 @@ grad=grad/max(grad(:));
 hp=imhist(grad);
 hp(1)=0;
 T=otsuthresh(hp);%¿É¶Ô±È¿¼ÂÇgraythresh
-g=im2bw(grad,T);
+g=imbinarize(grad,T);
 %% Í¼Ïñ·Ö¸î
 image_g=image .* g;
 figure,imshow(image_g),title('Í¼Ïñ·Ö¸î');
