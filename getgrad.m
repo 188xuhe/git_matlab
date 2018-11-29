@@ -2,9 +2,9 @@ function [gradx,grady,grad,angle] = getgrad(image,m,n,r)
 %GETGRAD 此处显示有关此函数的摘要
 %   此处显示详细说明
 %% 滤波方法得到梯度
-h=fspecial("sobel");                    %sobel
-gradx = filter2(h,image,'same');
-grady = filter2(h',image,'same');
+% h=fspecial("sobel");                    %sobel
+% gradx = filter2(h,image,'same');
+% grady = filter2(h',image,'same');
 %% 
 EPI	= 57.29578;     %360/2pi，角度和弧度的换算
 Vx = zeros(m,n);
@@ -55,6 +55,7 @@ for x = 1:m
             angle(x,y) = 180 - fangle;  %图像角度
     end
 end
+gradx=Vx;grady=Vy;
 figure,imshow(grad,[0 256]),title("grad");
 figure,imshow(angle,[0 180]),title("angle");
 
